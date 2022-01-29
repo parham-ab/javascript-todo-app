@@ -1,0 +1,197 @@
+/* CSS reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  user-select: none;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(81deg, #0fc0ca, #0554c3, #950df0, #f00d47);
+  background-size: 800% 800%;
+  -webkit-animation: grad 90s ease infinite;
+  -moz-animation: grad 90s ease infinite;
+  -o-animation: grad 90s ease infinite;
+  animation: grad 90s ease infinite;
+  font-family: cursive;
+}
+@-webkit-keyframes grad {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 51%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes grad {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 51%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-o-keyframes grad {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 51%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes grad {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 51%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* header */
+header {
+  font-size: 2rem;
+  text-shadow: 3px 1px 2px rgb(90, 90, 90);
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #efefef;
+}
+/* container (bring elements center) */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+/* completed tasks */
+.completed {
+  opacity: 0.5;
+  text-decoration: line-through;
+  color: green;
+  transition: all 1s;
+}
+/* todo input */
+input {
+  width: 300px;
+  height: 50px;
+  padding: 0 10px;
+  border: none;
+  border-radius: 8px 0 0 8px;
+  background-color: #e4e4e4;
+  font-size: 1.1rem;
+}
+/* buttons */
+button {
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  margin-bottom: 10px;
+}
+/* icons size */
+.fa-plus {
+  font-size: 1rem;
+}
+/* add todo container */
+.todo {
+  padding: 100px 0 50px;
+}
+.add {
+  border-radius: 0 8px 8px 0;
+  width: 50px;
+  height: 50px;
+  background-color: #ffc107;
+  transition: all 0.3s;
+  margin-left: -5px;
+}
+.add:hover {
+  background-color: #ebb208;
+  transition: all 0.3s;
+}
+.add:active {
+  background-color: #daa60b;
+  transition: all 0.3s;
+}
+/* todo list container */
+.list {
+  width: 500px;
+  word-break: break-all;
+  padding-bottom: 100px;
+}
+ul {
+  align-items: center;
+  background-color: rgb(173, 225, 250);
+  list-style: none;
+  border-radius: 20px;
+}
+li {
+  font-size: 1.3rem;
+  margin: 10px;
+  padding: 4px;
+}
+li:first-child {
+  border-top: none;
+}
+li {
+  border-top: 2px solid rgb(94, 90, 105);
+}
+/* complete btn */
+.complete {
+  font-size: 1.5rem;
+  background-color: rgb(37, 155, 37);
+  border-radius: 0 10px 10px 0;
+  color: #fff;
+  padding: 10px 6px;
+  transition: all 0.3s;
+}
+.complete:hover {
+  background-color: rgb(13, 114, 13);
+  transition: all 0.3s;
+}
+.complete:active {
+  background-color: rgb(15, 87, 15);
+  transition: all 0.1s;
+}
+/* delete btn */
+.delete {
+  font-size: 1.5rem;
+  background-color: rgb(233, 68, 68);
+  border-radius: 10px 0 0 10px;
+  color: #fff;
+  padding: 10px 9px;
+  transition: all 0.3s;
+}
+.delete:hover {
+  background-color: rgb(187, 48, 48);
+  transition: all 0.3s;
+}
+.delete:active {
+  background-color: rgb(158, 37, 37);
+  transition: all 0.1s;
+}
+/* media query */
+@media screen and (max-width: 515px) {
+  .list {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 344px) {
+  input {
+    width: 200px;
+  }
+}
