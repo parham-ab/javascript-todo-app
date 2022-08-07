@@ -4,9 +4,27 @@
 *::after {
   margin: 0;
   padding: 0;
+  border: none;
   outline: none;
   user-select: none;
   box-sizing: border-box;
+}
+/* scroll bar  */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(158, 158, 158);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(187, 187, 187);
+}
+::-webkit-scrollbar-thumb:active {
+  background-color: rgb(207, 207, 207);
 }
 body {
   background: linear-gradient(81deg, #0fc0ca, #0554c3, #950df0, #f00d47);
@@ -92,14 +110,13 @@ input {
   height: 50px;
   padding: 0 10px;
   border: none;
-  border-radius: 8px 0 0 8px;
+  border-radius: 8px;
   background-color: #e4e4e4;
   font-size: 1.1rem;
 }
 /* buttons */
 button {
   cursor: pointer;
-  border: none;
   color: #fff;
   margin-bottom: 10px;
 }
@@ -111,19 +128,20 @@ button {
 .todo {
   padding: 100px 0 50px;
 }
-.add {
-  border-radius: 0 8px 8px 0;
-  width: 50px;
-  height: 50px;
-  background-color: #ffc107;
-  transition: all 0.3s;
-  margin-left: -5px;
+.fa-plus::before {
+  width: 10px;
+  height: 10px;
+  background: #ffc107;
+  padding: 11px;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
 }
-.add:hover {
+.fa-plus:hover::before {
   background-color: #ebb208;
   transition: all 0.3s;
 }
-.add:active {
+.add:active::before {
   background-color: #daa60b;
   transition: all 0.3s;
 }

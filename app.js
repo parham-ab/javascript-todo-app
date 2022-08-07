@@ -1,8 +1,9 @@
 // elements
 const input = document.querySelector("input");
-const AddToto = document.querySelector(".add");
+const AddToto = document.querySelector(".fa-plus");
 const ul = document.querySelector("ul");
 const list = document.querySelector(".list");
+console.log(AddToto);
 // function's
 AddToto.addEventListener("click", function () {
   // variables
